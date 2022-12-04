@@ -12,10 +12,17 @@
       href="./images/favicon-32x32.png"
     />
 
+    <script
+      src="https://kit.fontawesome.com/65eecd64a8.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Frontend Mentor | Product preview card component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Montserrat:ital,wght@0,600;1,100&display=swap");
+
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -24,7 +31,7 @@
         color: hsl(228, 45%, 44%);
       }
 
-      .body {
+      body {
         background-color: hsl(30, 38%, 92%);
         display: flex;
         flex-direction: column;
@@ -32,41 +39,135 @@
         align-items: center;
         min-height: 100vh;
       }
-      .pic{
 
+      .pic {
+        background-color: white;
+        align-items: center;
+        padding: 0px;
+        max-width: 700px;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .pic img {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 50%;
+        height: 450px;
+      }
+
+      .des {
+        float: right;
+        margin-right: 5%;
+      }
+
+      .prod-title,
+      .prod-des {
+        font-family: "Montserrat", sans-serif;
+        font-size: small;
+        font-weight: 500;
+        color: hsl(228, 12%, 48%);
+      }
+
+      .prod-title {
+        letter-spacing: 3px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+
+      .prod-name,
+      .prod-price {
+        font-family: "Fraunces", serif;
+        font-size: 40px;
+        margin: 0%;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+
+      .prod-des {
+        margin-top: 20px;
+        font-weight: 500;
+      }
+
+      .prod-price {
+        color: rgb(63, 162, 79);
+      }
+
+      .old {
+        top: 10px;
+        color: black;
+        font-size: 35%;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .prod-cart {
+        background-color: rgb(63, 162, 79);
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        position: relative;
+        display: inline-block;
+        border-radius: 10px;
+        width: 220px;
+        height: 50px;
+        margin-top: 10px;
+        letter-spacing: 1px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        border-style: none;
+        cursor: pointer;
+      }
+
+      .prod-cart:hover {
+        background-color: rgb(101, 206, 118);
+      }
+
+      @media (max-width: 576px) {
+        .des {
+          float: none;
+          padding: 2rem;
+        }
+        .pic img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+        }
+        .des br {
+          display: none;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="body">
-      <div class="pic">
-        <img src="./images/image-product-desktop.jpg" alt="product" />
-      </div>
-      <div class="text">
+    <div class="pic">
+      <img src="images/image-product-desktop.jpg" alt="" />
+      <div class="des">
         <p class="prod-title">PERFUME</p>
-        <h1>Gabrielle Essence Eau De Parfum</h1>
-        <p>
-          A floral, solar and voluptuous
-    interpretation composed by Olivier Polge, Perfumer-Creator for the House of
-    CHANEL.
+        <p class="prod-name">
+          Gabrielle <br />
+          Essence Eau <br />
+          De Parfum
         </p>
-        <div class="price">
-          <h2>$149.99 $169.99</h2>
-        </div>
-        <button class="prod-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>Add to Cart</button>
+        <p class="prod-des">
+          A floral, solar and voluptuous <br />
+          interpretation composed by <br />
+          Olivier Polge, Perfumer-Creator <br />
+          for the House of CHANEL.
+        </p>
+        <p class="prod-price">
+          $149.99 <sup class="old"><s>$169.99</s></sup>
+        </p>
+        <button class="prod-cart">
+          <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+        </button>
       </div>
-    Preview Gabrielle Essence Eau De Parfum A floral, solar and voluptuous
-    interpretation composed by Olivier Polge, Perfumer-Creator for the House of
-    CHANEL. $149.99 $169.99 Add to Cart
+    </div>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Kaito</a>.
     </div>
-    <!-- Script -->
-    <script src="https://kit.fontawesome.com/65eecd64a8.js" crossorigin="anonymous"></script>
-  
   </body>
 </html>
